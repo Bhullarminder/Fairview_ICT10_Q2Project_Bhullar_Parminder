@@ -4,45 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Campus ICT 10 - Q2 Project</title>
+    <title>Campus ICT 10 - Student Showcase</title>
 
+    <!-- PyScript -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <h1>Campus ICT 10</h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Campus ICT 10</a>
 
-    <h3>Club Member Checker</h3>
+            <div>
+                <a class="btn btn-outline-light btn-sm" href="index.html">Home</a>
+                <a class="btn btn-outline-light btn-sm" href="elements.html">Element Checker</a>
+                <a class="btn btn-outline-light btn-sm" href="school.html">School Clubs</a>
+                <a class="btn btn-outline-light btn-sm" href="creator.html">Meet the Creator</a>
+            </div>
+        </div>
+    </nav>
 
-    <label>First Name:</label>
-    <input type="text" id="firstName">
-    <br><br>
 
-    <label>Last Name:</label>
-    <input type="text" id="lastName">
-    <br><br>
+    <!-- Homepage / Seatwork 1 -->
+    <main class="container mt-5">
 
-    <button py-click="check_member">Check Member</button>
+        <div class="text-center mb-4">
+            <h1>Student Showcase 2026</h1>
+            <p class="lead">Python Datatypes and PyScript Projects</p>
+        </div>
 
-    <p id="result"></p>
 
-    <hr>
+        <!-- Club Member Checker -->
+        <div class="card shadow mx-auto" style="max-width: 600px;">
 
-    <h3>My Webpages</h3>
+            <div class="card-header bg-dark text-white text-center">
+                <h3 class="mb-0">Club Member Checker</h3>
+                <small>Seatwork 1</small>
+            </div>
 
-    <a href="index.html">Home</a>
-    <br><br>
+            <div class="card-body">
 
-    <a href="elements.html">Element Checker</a>
-    <br><br>
+                <p class="text-center">
+                    Enter your name to check if you are an ICT Club member.
+                </p>
 
-    <a href="school.html">School Club Members</a>
-    <br><br>
+                <label for="firstName" class="form-label">First Name:</label>
+                <input type="text" id="firstName" class="form-control">
 
-    <a href="creator.html">Meet the Creator</a>
+                <br>
 
+                <label for="lastName" class="form-label">Last Name:</label>
+                <input type="text" id="lastName" class="form-control">
+
+                <br>
+
+                <div class="text-center">
+                    <button py-click="check_member" class="btn btn-dark">
+                        Check Member
+                    </button>
+                </div>
+
+                <div id="result" class="alert alert-secondary mt-4">
+                    Result will appear here.
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Other Projects -->
+        <div class="mt-5">
+
+            <h2 class="text-center mb-4">My Projects</h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h4>Element Checker</h4>
+                            <p>
+                                Check information about different non-metal elements.
+                            </p>
+                            <a href="elements.html" class="btn btn-dark">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h4>School Club Members</h4>
+                            <p>
+                                Add a new member to the list of school club members.
+                            </p>
+                            <a href="school.html" class="btn btn-dark">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h4>Meet the Creator</h4>
+                            <p>
+                                Learn more about the creator of this website.
+                            </p>
+                            <a href="creator.html" class="btn btn-dark">
+                                Meet the Creator
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center mt-5 p-3">
+        <p class="mb-0">Campus ICT 10 • Student Showcase 2026</p>
+    </footer>
+
+
+    <!-- Seatwork 1 Python -->
     <script type="py" src="club.py"></script>
 
 </body>
