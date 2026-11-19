@@ -1,5 +1,7 @@
 from pyscript import display
 
+# String
+name = "Paminder Singh Bhullar"
 # Tuple
 favorites = ("Red", "Bears", "Sloths", "Basketball")
 
@@ -17,12 +19,10 @@ sports = {"Basketball"}
 likes = animals.union(sports)
 
 # Display information
+display("Name: " + name, target="creatorInfo")
 display("Favorite Color: " + favorites[0], target="creatorInfo")
 display("Favorite Animals: " + favorites[1] + " and " + favorites[2], target="creatorInfo")
 display("Favorite Sport: " + favorites[3], target="creatorInfo")
-
 display("Interests: " + ", ".join(interests), target="creatorInfo")
-
 display("Things I Like: " + ", ".join(likes), target="creatorInfo")
-
 display("Favorite Quote: This too shall pass.", target="creatorInfo")
